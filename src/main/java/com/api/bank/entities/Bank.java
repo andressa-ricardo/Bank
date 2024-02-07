@@ -18,9 +18,17 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "users")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Bank {
     @Id @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -39,6 +47,4 @@ public class Bank {
     
     @NotNull
     private String password;
-    
-    
 }
